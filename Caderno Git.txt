@@ -1,0 +1,560 @@
+*IMPORTANTE*
+Passos a serem seguidos ao se trabalhar com uma equipe:
+1) git pull da branch principal
+2) gerar uma nova branch temporária a partir da branch principal 
+3) trabalhar e adicionar novas funcionalidades na nova branch que criou 
+4) finalizar o trabalho na branch temporaria
+5) git checkout na branch principal 
+6) git pull
+7) mergiar (unir) o código da branch temporária com a branch princial (depois de testar)
+8) git push da branch principal 
+
+- ÍNDICE DE COMANDOS -
+git init
+
+git status
+
+git add "arquivo" 
+
+git add .
+
+git commit -m "nome nova versão" 
+
+git config --global user.email
+
+git config --global user.name
+
+git push
+
+git remote add origin (link navegador repositório git hub)
+
+git reflog
+
+git reset --hard
+
+git branch 
+
+git branch (nome nova branch)
+
+git checkout (Nome da branch para começar a ser utilizada)
+
+git pull
+
+git merge (branch que traremos para a atual)
+
+git checkout -b (nome da nova branch) (nome da branch principal)
+
+touch .gitignore
+
+
+- Dúvidas -
+
+O que são os parâmetros e como utilizar 
+
+Para que serve exatamente o -b e o -m 
+
+Como fazer para deletar arquivos, commits e branches. 
+
+Como fazer para trocar de repositório 
+
+___________________________________________________________________________________________
+COMO INICIALIZAR UM REPOSITÓRIO
+___________________________________________________________________________________________
+
+- CONFIGURAÇÃO INICIAL -
+1) Nova pasta 
+2) Botão direito dentro da pasta
+3) Opção "Open Git Bash Here" 
+4) Pop-up de comando 
+
+
+- COMANDO -
+git init 
+
+p/ inicializar 
+
+*Na pasta aparentemente não irá acontecer nada. Tem que habilitar a visualização de pastas ocultas. 
+
+
+- COMANDO -
+git status 
+
+Para que eu possa veriricar o status do meu repositório, se o local onde eu estou guardando o meu código está ou não atualizado. 
+
+Será gerado um relatório dizendo quais arquivos já foram incluídos no controle de versão, e quais arquivos ainda não foram incluídos no controle de versão, ou se um arquivo foi simplesmente atualizado. 
+
+
+- MSG -
+No commit yet
+
+Commit = versão do código. Ou seja, ainda não há novas versões do código. 
+
+
+- MSG - 
+Untracked files 
+
+É um aviso de que o arquivo ainda não foi adicionado ao controle de versão. 
+
+Ele apontará qual(is) arquivos ainda não entraram no controle de versão, no caso, destacado em vermelho. 
+
+
+___________________________________________________________________________________________
+COMO ADICIONAR ARQUIVOS AO CONTROLE DE VERSÃO
+___________________________________________________________________________________________
+
+- COMANDO -
+git add "arquivo"
+
+Serve para adicionar o arquivo no controle de versão. 
+
+O nome do arquivo deverá ser adicionado entre áspas duplas. Não esquecer de colocar junto os 
+
+
+- COMANDO - 
+git add . 
+
+Precisa ter o espaço e depois o ponto
+
+Serve para adicionar todos os arquivos pendentes da pasta que não estão no controle de versão, ao invés de adicionar arquivo por arquivo 
+
+
+___________________________________________________________________________________________
+COMO CRIAR VERSÕES DO CÓDIGO COM COMMIT
+___________________________________________________________________________________________
+
+- COMANDO - 
+git commit -m "commit inicial"
+
+Serve para criar uma versão do código 
+
+-m = mensagem (?) É um parâmetro. 
+
+Chamar o primeiro commit de "commit inicial" faz parte das boas práticas de uso do Git 
+
+Os arquivos agora vão ser enviados para um repositório na nuvem, dentro do github
+
+
+- MSG - 
+Já que estamos utilizando pela primeira vez, o git pergunta quem é que está fazendo o controle de versão, então ele irá pedir uma configuração inicial no computador
+
+ele diz o comando exato para se configurar o git, no caso, git config --global user.email "email usado no github" e git config --global user.name "meu nome" 
+
+Estas informações serão exibidas a cada versão do código atualizado
+
+
+- COMANDOS -
+git config --global user.email
+git config --global user.name
+
+Para configurar o seu e-mail e nome no git na máquina que você estiver utilizando 
+
+Caso tenha sido necessário colocar este comando, agora coloque novamente o comando commit
+
+
+- MENSAGEM - 
+[maser (root-commit) 5d7a8b3] commit inicial 
+
+Aparece após uma nova commit ter sido criada
+
+É uma branch. Mais a baixo será explicado melhor 
+
+
+___________________________________________________________________________________________
+COMO ENVIAR ALTERAÇÕES USANDO GIT PUSH 
+___________________________________________________________________________________________
+
+- COMANDO -
+git push 
+
+Se o Git, o link do repositório e a branch já estiverem devidamente configurados, a alteração será enviada para o GitHub
+
+
+- MENSAGEM -
+No configured push destination 
+
+É porque ele não sabe para onde fazer o "push", ou seja, para onde enviar estas alterações. 
+
+Então, precisaremos determinar para onde estas alterações serão enviadas, ou seja, o link do projeto na nuvem. Porém, como ainda não temos, vamos criar agora. 
+
+
+- SITE GIT HUB - 
+1) Botão "+" na lateral superior direita 
+2) New repository
+3) Colocar nome e descrição
+*Dica: colocar como público quando quiser que um recutador veja os seus conhecimentos, e em privado quando você estiver trabalhando com dados sensíveis.  
+4) Ativar o "Add README", para que as pessoas vejam como utilizar aquele repositório
+5) Criar 
+6) Copiar o link do navegador 
+
+
+- COMANDO -
+git remote add origin (link navegador repositório git hub)
+
+Não precisa dos parenteses   
+
+Ao tentar novamente e colocar o comando "git push", não irá funcionar de novo, porque não definimos para qual branch estaremos enviando o código. 
+
+Branch: são divisões ou versões diferentes do código que estão sendo versionadas de forma separada 
+
+Versionar: O versionamento consiste em estratégias para gerenciar as diferentes versões de um código, de um sistema ou de um modelo. É uma forma de administrar as mudanças que são feitas e de garantir mais segurança na transição de uma versão para outra.
+
+Inicialmente nós estaremos sempre enviando para a branch "master"
+
+1)Pegue o código disponibilizado na mensagem de erro: git push --set-upstream origin master
+2) Cole como próxima linha de comando 
+*Pop-up*
+3) Opção: Sign in with your browser
+*Navegador abre automaticamente no site do github*
+4) Opção: Authorize git-ecosystem 
+5) Coloque a senha github 
+
+Note que no programa Git terá novas adições 
+
+Note que no navegador, ao dar um refresh, terá uma mensagem avisando que há uma nova atualização na branch. "master had recent pushes x minutes ago". 
+
+
+- SITE GIT HUB -
+Ao clicar no botão "main" na lateral esquerda, terá disponível as branches criadas.
+
+Ao clicar na branch "master", poderemos ver o código adicionado corretamente e os arquivos. devidamente salvos 
+
+PRONTO! Acabamos de subir a primeira versão do código para o GitHub.
+
+
+___________________________________________________________________________________________
+CICLO DE ATUALIZAÇÃO DE CÓDIGO
+___________________________________________________________________________________________
+
+- Arquivo texto -
+Fazer uma modificação no nosso arquivo de texto "Meu código", como colocar uma linha de texto qualquer e fechar o arquivo.
+
+
+- COMANDO -
+git status 
+
+
+- MSG -
+modified: meu codigo.txt 
+
+Mostrará que uma modificação foi feita no arquivo, e estará destacado em vermelho.
+
+Agora, precisaremos adicionar esta modificação ao versionameno de código.  
+
+
+- COMANDO -
+git add .
+
+
+- COMANDO -
+git status
+
+
+- MSG - 
+modified: meu codigo.txt 
+
+Agora ele foi adicionado ao versionamento e está pronto para ser enviado para a próxima versão. 
+
+
+- COMANDO -
+git commit -m "Permitir cadastrar usuarios" 
+
+A cada nova versão, colocar o nome do que foi adicionado, para que possa ser rastreado um histórico de commits que faça sentido.
+
+
+- MSG -
+1 file changed, 2 insertions(+), 1 deletion(-)
+
+Esta mensagem permite verificar que a nova versão foi feita com sucesso. 
+
+
+- COMANDO -
+git push
+
+Para enviar a nova versão para o Controle de versão/Repositório/GitHub
+
+
+- SITE GIT HUB -
+Ao entrar na branch "master", e entrarmos no documento "Meu codigo", a atualização já estará lá, e mostrará que o nosso controle de versão está funcionando perfeitamente. 
+
+
+___________________________________________________________________________________________
+COMO VERIFICAR HISTÓRICO DE ATUALIZAÇÕES
+___________________________________________________________________________________________
+
+- COMANDO -
+git reflog
+
+
+- MSG -
+930e6b6 (HEAD -> master, origin/master) HEAD@{0}: commit: Permitir cadastrar usuarios
+5d7a8b3 HEAD@{1}: commit (initial): commit inicial
+
+A versão mais atual será sempre a linha do topo (Permitir cadastrar usuarios)
+
+A versão mais a baixo são as mais antigas (commit inicial) 
+
+
+___________________________________________________________________________________________
+COMO NAVEGAR ENTRE VERSÕES DO SEU CÓDIGO
+___________________________________________________________________________________________
+
+Vamos imaginar que você tenha cometido um erro e precisa voltar a uma versão anterior do seu código. 
+
+
+- COMANDO -
+git reset --hard (código no início da linha da versão após comando "reflog")
+
+Não precisa dos parenteses  
+
+Após o comando, ao abrirmos o documento localmente (no computador e não no Github), o documento terá sido alterado para a versão inicial
+
+- COMANDO -
+git reflog 
+
+Note que agora existem 3 versões, com uma delas sendo o reset, e as outras duas de commit
+
+Se quisermos voltar par a versão mais atual, lembrando que voltamos para a versão inicial, basta utilizarmos novamente o comando "reset"
+
+- COMANDO -
+git reset --hard (código no início da linha da versão após comando "reflog")
+
+Então, podemos navegar entre versões do código, sem se preocupar em perder o código, já que podemos navegar entre o "futuro e o passado". 
+
+*AVISO*: Não rode comandos de mudar versão a não ser que realmente seja necessário, sempre alinhar antes com o superior para ver qual é o procedimento que eles costumam fazer. Existem outras formas de fazer este processo. Há formas mais avançadas consultando o help do git. 
+
+
+___________________________________________________________________________________________
+O QUE SÃO BRANCHES E COMO CRIAR UMA
+___________________________________________________________________________________________
+
+
+Branch (galhos) são diferentes caminhos que você irá seguir durante o desenvolvimento do seu código. 
+
+Você pode imaginar cada branch como um local para você armazenar o versionamento do seu código. 
+
+Você sempre terá uma branch que você irá considerar como principal, no nosso caso, estamos considerando a branch "master" como principal. E você irá mandar as alterações sempre para ela. 
+
+Lembrando que cada versão irá representar uma nova funcionalidade ou uma correção de erro no seu código. 
+
+Quando você está fazendo o código para si mesmo e/ou não vai chegar a publicar o seu cósigo em produção, normalmente você irá utilizar somente uma branch. Não há motivo para complicar. 
+
+Ao trabalhar com equipes surgirá a necessidade de se criar novas branches, para que se mantenha a branch principal estável.
+
+Normalmente a branch principal é utilizada para se colocar os códigos que é certeza que funcionam, só que como o desenvolvimento não pode parar, o desenvolvimento será realizado nas branches paralelas.
+
+O nome desse processo é "merge".
+
+
+- COMANDO -
+git branch 
+
+Para mostrar quais são as branches disponíveis. 
+
+
+- COMANDO -
+git branch staging 
+
+Serve para adicionar uma nova branch.
+
+Normalmente as branches paralelas para desenvolvimento serão chamadas de "staging", quase como parte das boas práticas. É um nome para a branch que estará recebendo atualizações e que ainda não foram testadas em produção. É apenas boas práticas, mas você pode chamar da funcionalidade a ser desenvolvida também. 
+
+
+- COMANDO -
+git branch 
+
+Agora vemos que há duas branches. 
+
+A branch utilizada atualmente esrá destacada com um asterísco e estará em verde. 
+
+
+- COMANDO -
+git checkout (Nome da branch para começar a ser utilizada)
+
+Não precisa dos pareteses. 
+
+Este comando serve para trocar de branch 
+
+
+- MENSAGEM - 
+Switched to branch 'staging'
+
+
+- COMANDO - 
+git branch 
+
+Note que agora a branch "staging" está em verde e com o asterísco 
+
+
+- Arquivo de texto -
+realizada pequena alteração
+
+
+- COMANDO - 
+git status 
+
+Note que a alteração aparece em vermelho, e que a branch agora é a "staging".
+
+
+- COMANDO -
+git add .
+
+
+- COMANDO -
+git status 
+
+Para verificar se não há qualquer erro antes de enviar 
+
+
+- COMANDO -
+git push 
+
+Note que deu erro. Ele vai pedir para você rodar o comando que ele próprio disponibiliza, já que é uma branch nova: git push --set-upstream origin staging
+
+
+- SITE GITHUB -
+Indo no menú de branches, a nova branch "staging" já estará disponível, e a alteração estará lá. Note que no mesmo documento na branch "master" não terá a atualização. 
+
+No botão "histórico" há todo o histórico de modificações 
+
+
+___________________________________________________________________________________________
+GIT MERGE COMO UNIR O CÓDIGO
+___________________________________________________________________________________________
+
+Este comando será utilizado para unir as branches
+
+Antes de fazermos a junção de branches, precisamos ter certeza de que na hora de unir os códigos, um outro colega não adicionou algo, podendo ter o risco de puxarmos informação desatualizada. Para isso, utilizamos o comando "pull", para trazer as informações atualizadas do servidor para a sua máquina.
+
+
+- COMANDO -
+git pull 
+
+
+- COMANDO -
+git merge (branch que traremos para a atual)
+
+Lembrando que precisamos primeiro entrar na principal (ou o destino), e depois colocar o comando para trazer as informações para cá, para a atual.  
+
+
+- MSG -
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+Mensagem confirmando a troca com sucesso. 
+
+*IMPORTANTE*
+Passos a serem seguidos ao se trabalhar com uma equipe:
+1) git pull da branch principal
+2) gerar uma nova branch a partir da branch principal 
+3) trabalhar e adicionar novas funcionalidades na nova branch que criou 
+4) finalizar o trabalho na branch temporaria
+5) git checkout na branch principal 
+6) git pull
+7) mergiar (unir) o código da branch temporária com a branch princial (depois de testar)
+8) git push da branch principal 
+
+
+- COMANDO -
+git checkout -b sistema-de-login master
+
+Para se criar uma nova branch com base na branch principal 
+
+Sintaxe: git checkout -b (nome da nova branch) (nome da branch principal)
+
+-b (traço b) provavelmente é um parâmetro (?) 
+
+O nome da branch está separado por traço simplesmente para facilitar a leitura, não é regra e nem boas práticas 
+
+A branch paralela podemos chamar também de branch funcional 
+
+Essa branch nova não aparece na lista de branches do Github?
+
+
+
+___________________________________________________________________________________________
+PULL REQUEST UM MERGE DEMOCRÁTICO
+___________________________________________________________________________________________
+
+
+É quando você envia o seu código e um outro programador vai avaliar/testar/aprovar antes de colocar na branch principal. 
+
+- COMANDO -
+git checkout sistema-de-login
+
+Lembrando que é uma branch temporária, e por isso automaticamente ao querermos enviar uma nova versão para a nuvem para, ela vai fazer o pull-request. 
+
+- Arquivo texo -
+Alteração qualquer 
+
+- COMANDO -
+git status
+
+git add .
+
+git status
+
+git commit -m "adicionado idade ao sistema"
+
+git push 
+
+- MSG -
+erro por ser uma nova branch que não enviou ainda qualquer arquivo, só demos merge anteriormente
+
+copiar e colar comando disponibilizado: --set-upstream origin sistema-de-login
+
+Enviado
+
+
+- Site Github -
+1) Refresh na página
+2) Clicar no botão em verde na mensagem "master had recent pushes less then a minute ago", onde a mensagem está escrita "Compare & pull request"
+3) alterar: de "main" para "master", deixando da seguinte forma: master <= sistema-de-login
+*Isso serve para fazer merge
+*Note que ao fazer o merge surgirá um novo ecossistema
+*Coloque o título do que está sendo feito
+4) Clique no botão "Create pull request" 
+*Como não há outras pessoas nesta equipe, ele já está pronto para realizar o merge. 
+*Note que na lateral direita há uma área de "reviewers", que são as pessoas que verificarão o seu código. 
+*Como não há outras pessoas para aprovarem, nós mesmos podemos aprovar o merge 
+5) Clique no botão "Merge pull request"
+6) Confirme 
+*Note que agora ficou roxo
+
+
+___________________________________________________________________________________________
+GIT IGNORE
+___________________________________________________________________________________________
+
+Utilizamos este comando quando há arquivos que não queremos por x motivo que sejam enviados
+
+Para solucionarmos este problema, vamos criar um arquivo chamado "Git ignore".
+
+*Importante*
+Utilizaremos o próprio terminal do git para realizar este comando, já que não conseguimos fazer isso diretamente pelo Windows. 
+
+- COMANDO-
+touch .gitignore
+
+Note que na nossa pasta foi criado um novo arquivo
+1) Clique com o botão direito
+2) Selecione abrir com o bloco de notas 
+*Assim definiremos quais pastas nós iremos querer ignorar para não entrarem no controle de versão
+3) Escreva o nome da pasta e salve
+*quando for adicionar um documento, não esquecer de colocar o tipo de documento (foto.png) e NÃO colocar a barra no final. 
+4) Agora, adicione o arquivo "gitignore", porque ele é quem controla quem aparece e quem não aparece 
+
+- COMANDO -
+git add .
+
+- COMANDO -
+git commit -m "adicionando arquivo gitignore" 
+
+- COMANDO -
+git push 
+
+
+
+___________________________________________________________________________________________
+DÚVIDA - DELETAR ARQUIVO
+___________________________________________________________________________________________
+
+Pelo visto, para deletar um arquivo, é só deletar na pasta manualmente, depois abrir o prompt, rodar o status, add ., commit, push. 
