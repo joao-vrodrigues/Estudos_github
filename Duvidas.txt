@@ -7,3 +7,5 @@ Para que serve exatamente o -b e o -m
 Como fazer para deletar arquivos, commits e branches. 
 
 Como fazer para trocar de repositório 
+
+Porque quando eu coloco o comando "git ref log" ele está travando? Quais são as limitações? 
