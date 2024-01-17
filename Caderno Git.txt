@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=kB5e-gTAl_s&list=WL&index=6
+
 *IMPORTANTE*
 Passos a serem seguidos ao se trabalhar com uma equipe:
 1) git pull da branch principal
