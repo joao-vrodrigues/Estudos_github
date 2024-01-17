@@ -1,0 +1,5 @@
+_________________________________________________________________________________________
+DÚVIDA - DELETAR ARQUIVO
+___________________________________________________________________________________________
+
+Pelo visto, para deletar um arquivo, é só deletar na pasta manualmente, depois abrir o prompt, rodar o status, add ., commit, push. 

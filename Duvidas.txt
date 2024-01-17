@@ -1,0 +1,9 @@
+- Dúvidas -
+
+O que são os parâmetros e como utilizar 
+
+Para que serve exatamente o -b e o -m 
+
+Como fazer para deletar arquivos, commits e branches. 
+
+Como fazer para trocar de repositório 
